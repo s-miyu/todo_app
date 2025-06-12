@@ -1,5 +1,5 @@
 class List < ApplicationRecord
-  has_many :todo
+  has_many :todos
 
-  validates :name
+  validates :name, presence: true
 end
