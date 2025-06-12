@@ -25,7 +25,8 @@ COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
 # React/TypeScriptの依存関係をインストール
-COPY package.json package-lock.json ./
+# COPY package.json package-lock.json ./
+COPY package.json ./
 RUN npm install
 
 # アプリケーションコードをコピー
@@ -36,3 +37,6 @@ EXPOSE 3000
 
 # サーバー起動時にデータベースをセットアップし、Railsサーバーを起動
 CMD ["bash", "-c", "bundle exec rails db:create db:migrate && bundle exec rails s -b '0.0.0.0'"]
+
+# サーバー起動時にserver.pidを削除
+CMD ["sh", "-c", "rm -f tmp/pids/server.pid && bundle exec rails s -b 0.0.0.0"]
