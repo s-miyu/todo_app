@@ -104,7 +104,6 @@ GEM
     dry-cli (1.2.0)
     error_highlight (0.7.0)
     erubi (1.13.0)
-    foreman (0.88.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.6)
@@ -162,7 +161,7 @@ GEM
       date
       stringio
     public_suffix (6.0.1)
-    puma (6.5.0)
+    puma (7.0.0)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.8)
@@ -302,7 +301,6 @@ DEPENDENCIES
   capybara
   debug
   error_highlight (>= 0.4.0)
-  foreman
   importmap-rails
   jbuilder
   pg (~> 1.1)
