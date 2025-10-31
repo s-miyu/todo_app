@@ -1,5 +1,5 @@
 class Todo < ApplicationRecord
   belongs_to :list
 
-  validates :name
+  validates :name, presence: true
 end
